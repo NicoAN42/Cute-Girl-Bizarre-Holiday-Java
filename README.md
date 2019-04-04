@@ -2,6 +2,7 @@
 
 ## SCREENSHOOT
 ![classDiagram.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/classDiagram.png)
++By. Alexander Agung
 
 # BIODATA TIM
 ## Nama 
