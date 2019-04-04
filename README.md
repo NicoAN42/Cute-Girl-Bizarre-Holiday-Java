@@ -1,6 +1,6 @@
 # Cute Girl : Bizarre Holiday 2D Adventure Game in Java
 
- Sebagai cara untuk meningkatkan potensi di bidang teknologi digital, kami "SEKAWAN" project OOP Binus University  
+ Sebagai cara untuk meningkatkan potensi di bidang teknologi digital, kami "AKN 48" project OOP Binus University  
  menciptakan "Cute Girl : Bizarre Holiday".
 
  Aplikasi ini adalah game 2D platform adventure yang membawa Anda kedalam kehidupan seorang gadis bernama "Cute Girl".
