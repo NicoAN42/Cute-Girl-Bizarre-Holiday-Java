@@ -4,9 +4,9 @@
 
 # BIODATA KELOMPOK
 # Nama 
-  Alexander Agung
-  Kevin Lesmana
-  Nico Ardian Nugroho
+ + Alexander Agung
+ + Kevin Lesmana
+ + Nico Ardian Nugroho
 # Instansi
   BINUS UNIVERSITY
 # Jurusan
