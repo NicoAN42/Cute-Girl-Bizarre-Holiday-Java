@@ -1,4 +1,4 @@
-# Ancient Advanture 2D Game in Java
+# Cute Girl : Bizarre Holiday 2D Adventure Game in Java
 
 # SCREENSHOOT
 
