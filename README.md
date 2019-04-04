@@ -1,13 +1,14 @@
 # Cute Girl : Bizarre Holiday 2D Adventure Game in Java
 
-# SCREENSHOOT
+## SCREENSHOOT
+![classDiagram.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/classDiagram.png)
 
-# BIODATA KELOMPOK
-# Nama 
+# BIODATA TIM
+## Nama 
  + Alexander Agung
  + Kevin Lesmana
  + Nico Ardian Nugroho
-# Instansi
+## Instansi
   BINUS UNIVERSITY
-# Jurusan
+## Jurusan
   School of Computer Science
