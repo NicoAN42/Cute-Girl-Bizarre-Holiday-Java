@@ -44,12 +44,12 @@ public class GameStateManager {
 	private void loadState(int state) {
 		if(state == STAGE1)
 			gameStates[state] = new Stage1(this);
-		else if(state == STAGE2)
-			gameStates[state] = new Stage2(this);
-		else if(state == STAGE3)
-			gameStates[state] = new Stage3(this);
-		else if(state == ACIDSTATE)
-			gameStates[state] = new AcidState(this);
+//		else if(state == STAGE2)
+//			gameStates[state] = new Stage2(this);
+//		else if(state == STAGE3)
+//			gameStates[state] = new Stage3(this);
+//		else if(state == ACIDSTATE)
+//			gameStates[state] = new AcidState(this);
 	}
 	
 	private void unloadState(int state) {

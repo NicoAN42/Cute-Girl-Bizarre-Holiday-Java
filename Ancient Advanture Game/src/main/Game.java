@@ -39,8 +39,8 @@ public class Game extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		AudioPlayer.load("/SFX/menuoption.mp3", "menuoption");
-		AudioPlayer.load("/SFX/menuselect.mp3", "menuselect");
+//		AudioPlayer.load("/SFX/menuoption.mp3", "menuoption");
+//		AudioPlayer.load("/SFX/menuselect.mp3", "menuselect");
 		gsm = new GameStateManager();
 		// TODO Auto-generated method stub
 		Pane root = new Pane();

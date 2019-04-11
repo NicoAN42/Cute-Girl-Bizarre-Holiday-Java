@@ -96,7 +96,7 @@ public class MenuState extends GameState {
 		if(currentChoice == 0) {
 			AudioPlayer.play("menuselect");
 			PlayerSave.init();
-			gsm.setState(GameStateManager.LEVEL1ASTATE);
+			gsm.setState(GameStateManager.STAGE1);
 		}
 		else if(currentChoice == 1) {
 			System.exit(0);
