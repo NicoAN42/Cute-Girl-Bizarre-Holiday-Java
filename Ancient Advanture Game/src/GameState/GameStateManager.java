@@ -1,7 +1,7 @@
 package GameState;
 
 import Audio.AudioPlayer;
-import Main.GamePanel;
+import main.GamePanel;
 
 public class GameStateManager {
 	

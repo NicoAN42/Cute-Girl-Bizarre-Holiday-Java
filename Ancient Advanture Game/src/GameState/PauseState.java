@@ -5,7 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 
 import Handlers.Keys;
-import Main.GamePanel;
+import main.GamePanel;
 
 public class PauseState extends GameState {
 	
