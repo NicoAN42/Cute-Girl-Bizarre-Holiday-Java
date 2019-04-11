@@ -9,8 +9,8 @@ import javax.imageio.ImageIO;
 
 import Audio.AudioPlayer;
 import Obj.PlayerSave;
-import main.GamePanel;
 import Handlers.Keys;
+import main.GamePanel;
 
 public class MenuState extends GameState {
 	

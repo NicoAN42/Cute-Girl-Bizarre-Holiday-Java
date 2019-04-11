@@ -1,8 +1,15 @@
 package main;
 
+import java.awt.Graphics2D;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import Audio.AudioPlayer;
+
+import GameState.GameStateManager;
+import Obj.PlayerSave;
+import main.GamePanel;
+
 
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
@@ -25,11 +32,16 @@ import javafx.util.Duration;
 import javafx.scene.layout.VBox;
 
 public class Game extends Application{
-
+	private Graphics2D g;
+	private GameState.GameStateManager gsm;
 	private GameM gameMenu;
+	
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		AudioPlayer.load("/SFX/menuoption.mp3", "menuoption");
+		AudioPlayer.load("/SFX/menuselect.mp3", "menuselect");
+		gsm = new GameStateManager();
 		// TODO Auto-generated method stub
 		Pane root = new Pane();
 		root.setPrefSize(800, 600);
@@ -71,6 +83,9 @@ public class Game extends Application{
 				ft.setToValue(0);
 				ft.setOnFinished(evt->this.setVisible(false));
 				ft.play();
+				AudioPlayer.play("menuselect");
+				PlayerSave.init();
+				gsm.setState(GameStateManager.STAGE1);
 			});
 			
 			MenuButton btnOptions = new MenuButton("OPTIONS");
@@ -103,7 +118,7 @@ public class Game extends Application{
 				
 				tt.play();
 				tt1.play();
-				
+				AudioPlayer.play("menuselect");
 				tt.setOnFinished(evt->{
 					getChildren().remove(menu0);
 				});
@@ -167,6 +182,10 @@ public class Game extends Application{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
+	}
+	
+	private void draw() {
+		gsm.draw(g);
 	}
 
 
