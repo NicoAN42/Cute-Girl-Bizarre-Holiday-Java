@@ -1,38 +1,29 @@
 package GameState;
 
-import GameState.AcidState;
-import GameState.Stage1;
-import GameState.Stage2;
-import GameState.Stage3;
-import GameState.MenuState;
-
 import Audio.AudioPlayer;
-import main.Game;
 import main.GamePanel;
 
 public class GameStateManager {
 	
-	private Game[] game;
 	private GameState[] gameStates;
 	private int currentState;
 	
 	private PauseState pauseState;
 	private boolean paused;
 	
-	public static final int NUMGAME = 16;
 	public static final int NUMGAMESTATES = 16;
 	public static final int MENUSTATE = 0;
-	public static final int STAGE1 = 2;
-	public static final int STAGE2 = 3;
-	public static final int STAGE3 = 4;
+	public static final int LEVEL1ASTATE = 2;
+	public static final int LEVEL1BSTATE = 3;
+	public static final int LEVEL1CSTATE = 4;
 	public static final int ACIDSTATE = 15;
 	
 	public GameStateManager() {
 		
-		AudioPlayer.init();
+//		AudioPlayer.init();
 		
 		gameStates = new GameState[NUMGAMESTATES];
-		game = new Game[NUMGAME];
+		
 		pauseState = new PauseState(this);
 		paused = false;
 		
@@ -42,12 +33,14 @@ public class GameStateManager {
 	}
 	
 	private void loadState(int state) {
-		if(state == STAGE1)
-			gameStates[state] = new Stage1(this);
-//		else if(state == STAGE2)
-//			gameStates[state] = new Stage2(this);
-//		else if(state == STAGE3)
-//			gameStates[state] = new Stage3(this);
+		if(state == MENUSTATE)
+			gameStates[state] = new Level1BState(this);
+//		else if(state == LEVEL1ASTATE)
+//			gameStates[state] = new Level1AState(this);
+//		else if(state == LEVEL1BSTATE)
+//			gameStates[state] = new Level1BState(this);
+//		else if(state == LEVEL1CSTATE)
+//			gameStates[state] = new Level1CState(this);
 //		else if(state == ACIDSTATE)
 //			gameStates[state] = new AcidState(this);
 	}

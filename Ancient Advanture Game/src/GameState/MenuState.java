@@ -46,8 +46,8 @@ public class MenuState extends GameState {
 			font2 = new Font("Arial", Font.PLAIN, 10);
 			
 			// load sound fx
-			AudioPlayer.load("/SFX/menuoption.mp3", "menuoption");
-			AudioPlayer.load("/SFX/menuselect.mp3", "menuselect");
+//			AudioPlayer.load("/SFX/menuoption.mp3", "menuoption");
+//			AudioPlayer.load("/SFX/menuselect.mp3", "menuselect");
 			
 		}
 		catch(Exception e) {
@@ -96,7 +96,7 @@ public class MenuState extends GameState {
 		if(currentChoice == 0) {
 			AudioPlayer.play("menuselect");
 			PlayerSave.init();
-			gsm.setState(GameStateManager.STAGE1);
+			gsm.setState(GameStateManager.LEVEL1BSTATE);
 		}
 		else if(currentChoice == 1) {
 			System.exit(0);

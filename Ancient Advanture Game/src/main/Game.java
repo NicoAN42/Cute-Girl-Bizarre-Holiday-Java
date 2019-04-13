@@ -4,9 +4,13 @@ import java.awt.Graphics2D;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
+import javax.swing.JFrame;
+
 import Audio.AudioPlayer;
 
 import GameState.GameStateManager;
+import GameState.MenuState;
 import Obj.PlayerSave;
 import main.GamePanel;
 
@@ -83,9 +87,18 @@ public class Game extends Application{
 				ft.setToValue(0);
 				ft.setOnFinished(evt->this.setVisible(false));
 				ft.play();
-				AudioPlayer.play("menuselect");
-				PlayerSave.init();
-				gsm.setState(GameStateManager.STAGE1);
+				
+			
+//				AudioPlayer.play("menuselect");
+				JFrame window = new JFrame("Slebew");
+				window.add(new GamePanel());
+				window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				window.setResizable(false);
+				window.pack();
+				window.setLocationRelativeTo(null);
+				window.setVisible(true);
+				
+//				new MenuState(this);
 			});
 			
 			MenuButton btnOptions = new MenuButton("OPTIONS");
@@ -118,7 +131,7 @@ public class Game extends Application{
 				
 				tt.play();
 				tt1.play();
-				AudioPlayer.play("menuselect");
+//				AudioPlayer.play("menuselect");
 				tt.setOnFinished(evt->{
 					getChildren().remove(menu0);
 				});
