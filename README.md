@@ -12,10 +12,10 @@
 Created By. Alexander Agung
 
 ## Gameplay
+![ss4.PNG](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/ss4.PNG)
 ![ss1.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/ss1.png)
 ![ss2.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/ss2.png)
 ![ss3.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/ss3.png)
-![ss4.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/ss4.png)
 ![ss5.png](https://github.com/NicoAN42/Cute-Girl-Bizarre-Holiday-Java/blob/master/ss5.png)
 
 
