@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import javax.swing.JFrame;
+import javax.swing.JPopupMenu;
 
 import Audio.JukeBox;
 
@@ -42,8 +43,8 @@ public class Game extends Application{
 	Pane root = new Pane();
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-//		AudioPlayer.load("/SFX/menuoption.mp3", "menuoption");
-//		AudioPlayer.load("/SFX/menuselect.mp3", "menuselect");
+
+		
 		gsm = new GameStateManager();
 		// TODO Auto-generated method stub
 	
@@ -71,6 +72,11 @@ public class Game extends Application{
 	
 	private class GameM extends Parent{
 		public GameM() {
+			JukeBox.load("/Music/menusound.mp3", "menusound");
+			JukeBox.loop("menusound", 600, JukeBox.getFrames("menusound") - 2200);
+			
+			JukeBox.load("/SFX/menuoption.mp3", "menuoption");
+			JukeBox.load("/SFX/menuselect.mp3", "menuselect");
 			VBox menu0 = new VBox(15);
 			VBox menu1 = new VBox(15); //20 ini jarak tulisan atas dengan tulisan bawah
 			
@@ -83,14 +89,15 @@ public class Game extends Application{
 			
 			MenuButton btnResume = new MenuButton("PLAY");
 			btnResume.setOnMouseClicked(event->{
+				
 				FadeTransition ft = new FadeTransition(Duration.seconds(0.5), this);
 				ft.setFromValue(1);
 				ft.setToValue(0);
 				ft.setOnFinished(evt->this.setVisible(false));
 				ft.play();
 			
-
-//				AudioPlayer.play("menuselect");
+				JukeBox.stop("menusound");
+				JukeBox.play("menuselect");
 				JFrame window = new JFrame("Slebew");
 				window.add(new GamePanel());
 				window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -132,9 +139,11 @@ public class Game extends Application{
 				TranslateTransition tt1 = new TranslateTransition(Duration.seconds(0.25), menu0);
 				tt1.setToX(menu0.getTranslateX() - offset);
 				
-				tt.play();
-				tt1.play();
-//				AudioPlayer.play("menuselect");
+//				tt.play();
+//				tt1.play();
+				
+//				menu.show();
+				JukeBox.play("menuselect");
 				tt.setOnFinished(evt->{
 					getChildren().remove(menu0);
 				});
@@ -145,7 +154,7 @@ public class Game extends Application{
 				System.exit(0);
 			});
 			
-			menu0.getChildren().addAll(btnResume, btnOptions, btnExit);
+			menu0.getChildren().addAll(btnResume, btnOptions,btnHelp, btnExit);
 			
 			Rectangle bg = new Rectangle(800, 600);
 			bg.setFill(Color.GREY);

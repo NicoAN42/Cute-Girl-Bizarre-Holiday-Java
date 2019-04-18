@@ -19,6 +19,8 @@ public class JukeBox {
 	}
 	
 	public static void load(String s, String n) {
+//		if(clips==null)clips = new HashMap<String, Clip>();
+//		init();
 		if(clips.get(n) != null) return;
 		Clip clip;
 		try {			

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 import  Audio.JukeBox;
+import Main.Game;
 import  TileMap.TileMap;
 
 public class Player extends MapObject {
