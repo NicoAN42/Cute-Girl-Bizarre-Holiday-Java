@@ -16,6 +16,6 @@ Created By. Alexander Agung
  + Kevin Lesmana
  + Nico Ardian Nugroho
 ## Instansi
-  BINUS UNIVERSITY
+  BINUS UNIVERSITY - PPTI BCA 6
 ## Jurusan
   School of Computer Science
